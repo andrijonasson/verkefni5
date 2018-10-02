@@ -1,0 +1,79 @@
+* { /* Það sem er gefið frá kennara */
+  margin: 0; /* Svo boxin fara alveg útí enda*/ 
+  padding: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit; /* engin padding eða border */ 
+}
+
+html {
+  box-sizing: border-box;
+
+  font-family: 'Open Sans', helvetica, arial, sans-serif;
+  font-size: 16px;
+}
+
+main {
+  margin: 0 auto;
+  max-width: 1500px;
+  padding: 20px; /* Svo boxin dragast smá inn með textanum*/ 
+}
+
+.cards {
+  background: #eee;
+}/* efni frá kennara endar */ 
+
+  h2{
+    font-size: 1.375em; /* 22/16 = 1.375*/ 
+    line-height: 22px;
+}
+  p {
+    font-size: 1em;
+    line-height: 22px;
+}
+  .cards {
+    display: flex; /* Fyllir út í autt svæði*/ 
+    justify-content: space-around; /* Bil á milli boxa*/ 
+    flex-wrap: wrap;
+    background-color: #eee;
+}
+.card {
+    word-wrap: break-word; /* Svo orð sem er ekki með bili fer í næstu línu, svo það flæði t.d. ekki á myndina*/ 
+    flex-direction: row; /* Það eða column */ 
+    background-color: #fff;
+    border-radius: 5px;
+    border: 2px solid #aaa;
+    max-width: 470px;
+    max-height: 300px;
+    overflow: auto; /* Svo textinn flæði ekki út fyrir boxið*/ 
+    margin-bottom: 10px;
+} 
+
+.card__content { /* Þetta er efnið undir fyrirsögninni í boxunum*/ 
+  display: flex;
+ }
+ .card__p__container { /* Svo textinn flæði ekki inná myndina í boxinu */
+   overflow: auto;
+ }
+
+.card > *{
+padding: 10px   /* Svo það getur komið padding í boxin, því grunnstilling padding er 0*/
+} 
+.card>ul {  /* unordered list. Latnesku orðin neðst niðri*/ 
+  list-style: none;
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: auto;
+}
+li{
+  display: inline-flex; /* ordered list, notað svo orðin fara í línu við hvort annað*/ 
+}
+
+.card__img {
+display: inline;
+}
+.card__img>img {
+  width: 150px; /* Svo myndin fari í hornið á boxunum*/ 
+}
+
